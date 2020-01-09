@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.central.cms.mybatis.mapper.CpCmsMemberMapper">
+  <resultMap id="BaseResultMap" type="com.central.cms.mybatis.model.CpCmsMember">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="member_id" jdbcType="INTEGER" property="memberId" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="linkman" jdbcType="VARCHAR" property="linkman" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="status" jdbcType="BIT" property="status" />
+    <result column="ip" jdbcType="VARCHAR" property="ip" />
+    <result column="last_time" jdbcType="TIMESTAMP" property="lastTime" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
+    <result column="user_type" jdbcType="INTEGER" property="userType" />
+    <result column="level_id" jdbcType="INTEGER" property="levelId" />
+    <result column="integral" jdbcType="INTEGER" property="integral" />
+  </resultMap>
+</mapper>

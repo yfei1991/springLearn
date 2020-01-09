@@ -1,0 +1,56 @@
+server:
+  port: 9210
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+spring:
+  application:
+    name: cms-service
+  http:
+    encoding:
+      charset:  utf8
+      force: true
+      enabled: true
+#  zipkin:
+#    base-url: http://127.0.0.1:11008
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://mysql-cn-north-1-6fa4e7fc9e8d4468.public.jcloud.com:3306/cp_cms?characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: cp_cms
+    password: CPcms123
+    druid:
+        initial-size: 1
+        max-active: 20
+        max-open-prepared-statements: 20
+        max-wait: 60000
+        min-evictable-idle-time-millis: 300000
+        min-idle: 1
+        pool-prepared-statements: true
+        test-on-borrow: false
+        test-on-return: false
+        test-while-idle: true
+        time-between-eviction-runs-millis: 60000
+        validation-query: select 'x'
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    instance-info-replication-interval-seconds: 10
+    serviceUrl:
+      defaultZone:  http://127.0.0.1:1111/eureka
+      #http://130.75.131.241:8761/eureka,http://130.75.131.248:8762/eureka
+      #http://134.224.249.33:1111/eureka/  正式库
+      #http://134.224.249.33:1111/eureka/  测试库
+      #http://127.0.0.1:8761/eureka,http://127.0.0.1:8762/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+    #    instance-id: ${spring.application.name}:${docker.ipAddress}:${spring.application.instance_id:${server.port}}
+    lease-renewal-interval-in-seconds: 5  #每隔几秒告诉eureka服务器我还存活，用于心跳检测
+    lease-expiration-duration-in-seconds: 15 #如果心跳检测一直没有发送，10秒后会从eureka服务器中将此服务剔除

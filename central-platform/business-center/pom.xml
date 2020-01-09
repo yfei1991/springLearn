@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.central</groupId>
+    <artifactId>central-platform</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>business-center</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+  
+  <!-- 用户中心 -->
+	<module>user-center</module>
+	<!-- 日志中心 -->
+	<module>log-center</module>
+  <!-- 文件中心 -->
+	<module>file-center</module>
+	<!-- 批处理任务中心 -->
+	<module>batch-center</module>
+	<!-- 后台中心 -->
+	<module>back-center</module>
+  <!-- 代码生成器 -->
+	<module>generator-center</module>
+	<!-- 工作流中心 -->
+	<module>workflow-center</module>
+    <!-- CMS -->
+    <module>cms-center</module>
+  </modules>
+</project>

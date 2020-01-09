@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.central.cms.mybatis.mapper.CpCmsContentMapper">
+  <resultMap id="BaseResultMap" type="com.central.cms.mybatis.model.CpCmsContent">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="content_id" jdbcType="BIGINT" property="contentId" />
+    <result column="site_id" jdbcType="INTEGER" property="siteId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="category_id" jdbcType="BIGINT" property="categoryId" />
+    <result column="model_id" jdbcType="INTEGER" property="modelId" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="keywords" jdbcType="CHAR" property="keywords" />
+    <result column="top" jdbcType="BIT" property="top" />
+    <result column="recommend" jdbcType="BIT" property="recommend" />
+    <result column="thumb" jdbcType="VARCHAR" property="thumb" />
+    <result column="status" jdbcType="BIT" property="status" />
+    <result column="inputdate" jdbcType="TIMESTAMP" property="inputdate" />
+    <result column="updatedate" jdbcType="TIMESTAMP" property="updatedate" />
+    <result column="url" jdbcType="CHAR" property="url" />
+    <result column="author" jdbcType="CHAR" property="author" />
+    <result column="view_num" jdbcType="INTEGER" property="viewNum" />
+    <result column="description" jdbcType="LONGVARCHAR" property="description" />
+  </resultMap>
+</mapper>
