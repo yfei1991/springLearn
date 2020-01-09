@@ -1,5 +1,10 @@
 git config --list/git config user.name/git config user.email
 yfei1991/15079053659@139.com/mm.git.com123
+配置用户信息
+git config user.name="yfei1991"
+git config user.email="15079053659@139.com"
+git config user.password="mm.git.com123"
+
 git常用命令
 git init
      在本地新建一个repo,进入一个项目目录,执行git init,会初始化一个repo,并在当前文件夹下创建一个.git文件夹.
