@@ -28,7 +28,7 @@
         <mybatis.pagehelper-starter.vesion>1.2.3</mybatis.pagehelper-starter.vesion>
         <druid.version>1.1.10</druid.version>
         <commons-lang3.version>3.7</commons-lang3.version>
-        <commons-io.version>2.6</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
         <commons-codec.version>1.11</commons-codec.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <google-guava.version>19.0</google-guava.version>
